@@ -1,0 +1,207 @@
+
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//End CCS script
+</script>
+<title>users</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record usersSearch -->
+<form id="ContentusersSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Search </h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentusersSearchErrorBlock">
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td><label for="ContentusersSearchs_UserId">User Id</label></td> 
+      <td><input type="text" id="ContentusersSearchs_UserId" maxlength="250" size="50" value="{s_UserId}" name="{s_UserId_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersSearchs_UserFullName">User Full Name</label></td> 
+      <td><input type="text" id="ContentusersSearchs_UserFullName" maxlength="250" size="50" value="{s_UserFullName}" name="{s_UserFullName_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersSearchs_UserRole">User Role</label></td> 
+      <td>
+        <select id="ContentusersSearchs_UserRole" name="{s_UserRole_Name}">
+          <option selected value="">Select Value</option>
+          {s_UserRole_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersSearchs_UserEmail">User Email</label></td> 
+      <td><input type="text" id="ContentusersSearchs_UserEmail" maxlength="250" size="50" value="{s_UserEmail}" name="{s_UserEmail_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersSearchs_UserTelephone">User Telephone</label></td> 
+      <td><input type="text" id="ContentusersSearchs_UserTelephone" maxlength="250" size="50" value="{s_UserTelephone}" name="{s_UserTelephone_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersSearchs_UserAddress1">User Address1</label></td> 
+      <td><input type="text" id="ContentusersSearchs_UserAddress1" maxlength="250" size="50" value="{s_UserAddress1}" name="{s_UserAddress1_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersSearchs_UserAddress2">User Address2</label></td> 
+      <td><input type="text" id="ContentusersSearchs_UserAddress2" maxlength="250" size="50" value="{s_UserAddress2}" name="{s_UserAddress2_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersSearchs_UserAddress3">User Address3</label></td> 
+      <td><input type="text" id="ContentusersSearchs_UserAddress3" maxlength="250" size="50" value="{s_UserAddress3}" name="{s_UserAddress3_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersSearchs_UserTown">User Town</label></td> 
+      <td><input type="text" id="ContentusersSearchs_UserTown" maxlength="250" size="50" value="{s_UserTown}" name="{s_UserTown_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersSearchs_UserState">User State</label></td> 
+      <td>
+        <select id="ContentusersSearchs_UserState" name="{s_UserState_Name}">
+          <option selected value="">Select Value</option>
+          {s_UserState_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td style="TEXT-ALIGN: right" colspan="2">
+        <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentusersSearchButton_DoSearch" class="Button" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record usersSearch --><br>
+<!-- BEGIN Grid users -->
+<h2>List of Users</h2>
+<table>
+  <tr>
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_Id --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_Id">Id</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_Id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserId --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_UserId">User Id</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserId --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserFullName --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_UserFullName">User Full Name</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserFullName --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserRole1 --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_UserRole1">User Role1</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserRole1 --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserEmail --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_UserEmail">User Email</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserEmail --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserTelephone --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_UserTelephone">User Telephone</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserTelephone --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserAddress1 --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_UserAddress1">User Address1</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserAddress1 --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserAddress2 --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_UserAddress2">User Address2</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserAddress2 --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserAddress3 --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_UserAddress3">User Address3</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserAddress3 --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserTown --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_UserTown">User Town</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserTown --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_State --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_State">State</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_State --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_IsActive --><span class="Sorter"><a href="{Sort_URL}" id="ContentusersSorter_IsActive">Is Active</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_IsActive --></th>
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr>
+    <td style="TEXT-ALIGN: right"><a href="{Id_Src}" id="ContentusersId_{users:rowNumber}">{Id}</a>&nbsp;</td> 
+    <td>{UserId}&nbsp;</td> 
+    <td>{UserFullName}&nbsp;</td> 
+    <td>{UserRole1}&nbsp;</td> 
+    <td>{UserEmail}&nbsp;</td> 
+    <td>{UserTelephone}&nbsp;</td> 
+    <td>{UserAddress1}&nbsp;</td> 
+    <td>{UserAddress2}&nbsp;</td> 
+    <td>{UserAddress3}&nbsp;</td> 
+    <td>{UserTown}&nbsp;</td> 
+    <td>{State}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{IsActive}&nbsp;</td>
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td colspan="12">No records</td>
+  </tr>
+  <!-- END NoRecords -->
+  <tr>
+    <td colspan="12"><a href="{users_Insert_Src}" id="Contentusersusers_Insert">Add New</a>&nbsp; 
+      <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+      <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+        <option selected value="">-</option>
+ {PageSize_Options}
+      </select>
+ 
+      <!-- BEGIN First_On --><a href="{First_URL}">|&lt;</a> <!-- END First_On -->
+      <!-- BEGIN First_Off -->|&lt; <!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt;</a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off -->&lt;&lt; <!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt;</a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off -->&gt;&gt; <!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;|</a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off -->&gt;| <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+  </tr>
+</table>
+<!-- END Grid users --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->

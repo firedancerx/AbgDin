@@ -1,0 +1,71 @@
+
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Plugin Calls @1-3E75A6BE
+    $('*:ccsControl(Content, inventorycategory, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Inventorycategory</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record inventorycategory -->
+<form id="Contentinventorycategory" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Add/Edit Inventory Categories </h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentinventorycategoryErrorBlock">
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td><label for="ContentinventorycategoryInventoryCategory1">Inventory Category</label></td> 
+      <td><input type="text" id="ContentinventorycategoryInventoryCategory1" maxlength="250" size="50" value="{InventoryCategory1}" name="{InventoryCategory1_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentinventorycategoryIsActive">Is Active</label></td> 
+      <td><input type="text" id="ContentinventorycategoryIsActive" maxlength="10" size="10" value="{IsActive}" name="{IsActive_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td style="TEXT-ALIGN: right" colspan="2">
+        <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentinventorycategoryButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input type="submit" id="ContentinventorycategoryButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentinventorycategoryButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record inventorycategory --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->

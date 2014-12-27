@@ -1,0 +1,250 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Contentstates1Button_SubmitOnClick Event Start @-56614A74
+    actions["Contentstates1Button_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End Contentstates1Button_SubmitOnClick Event Start
+
+//Confirmation Message @30-257FDD03
+        return confirm('Submit records?');
+//End Confirmation Message
+
+//Contentstates1Button_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End Contentstates1Button_SubmitOnClick Event End
+
+//Event Binding @1-64042C1C
+    $('*:ccsControl(Content, states1, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["Contentstates1Button_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-DE054202
+    $('*:ccsControl(Content, states1, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Product_FuelSaver</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content --><br>
+<br>
+&nbsp; 
+<table width="100%">
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN Record statesSearch -->
+      <form id="ContentstatesSearch" method="post" name="{HTMLFormName}" action="{Action}">
+        <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+                  <td class="th"><strong>Search </strong></td> 
+                  <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr id="{@error-block}" class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <td class="th"><label for="ContentstatesSearchs_State">State</label></td> 
+                  <td><input type="text" id="ContentstatesSearchs_State" maxlength="250" size="50" value="{s_State}" name="{s_State_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="ContentstatesSearchs_Country">Country</label></td> 
+                  <td>
+                    <select id="ContentstatesSearchs_Country" name="{s_Country_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_Country_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="ContentstatesSearchs_SalesOffice">Sales Office</label></td> 
+                  <td>
+                    <select id="ContentstatesSearchs_SalesOffice" name="{s_SalesOffice_Name}">
+                      <option selected value="">Select Value</option>
+                      {s_SalesOffice_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td class="th"><label for="ContentstatesSearchs_IsActive">Is Active</label></td> 
+                  <td><input type="checkbox" id="ContentstatesSearchs_IsActive" value="1" name="{s_IsActive_Name}" {s_IsActive}></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td style="TEXT-ALIGN: right" colspan="2">
+                    <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentstatesSearchButton_DoSearch" class="Button" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --><input type="hidden" id="ContentstatesSearchs_Id" value="{s_Id}" name="{s_Id_Name}"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record statesSearch --></td>
+  </tr>
+ 
+  <tr>
+    <td>&nbsp; 
+      <!-- BEGIN EditableGrid states1 -->
+      <form id="Contentstates1" method="post" name="{HTMLFormName}" action="{Action}">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+                  <td class="th"><strong>List/Edit States </strong></td> 
+                  <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="5">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Caption">
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_Id --><span class="Sorter">Id 
+                  <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstates1Sorter_Id"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstates1Sorter_Id"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Id --></th>
+ 
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_State --><span class="Sorter">State 
+                  <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstates1Sorter_State"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstates1Sorter_State"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_State --></th>
+ 
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_Country --><span class="Sorter">Country 
+                  <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstates1Sorter_Country"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstates1Sorter_Country"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Country --></th>
+ 
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_SalesOffice --><span class="Sorter">Sales Office 
+                  <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstates1Sorter_SalesOffice"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstates1Sorter_SalesOffice"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_SalesOffice --></th>
+ 
+                  <th scope="col">
+                  <!-- BEGIN Sorter Sorter_IsActive --><span class="Sorter">Is Active 
+                  <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+                  <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="Contentstates1Sorter_IsActive"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+                  <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+                  <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="Contentstates1Sorter_IsActive"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_IsActive --></th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <!-- BEGIN RowError -->
+                <tr class="Error">
+                  <td colspan="5">{Error}</td>
+                </tr>
+                <!-- END RowError -->
+                <tr class="Row">
+                  <td><label for="Contentstates1Id_{states1:rowNumber}" style="display: none;">Id</label><input type="text" id="Contentstates1Id_{states1:rowNumber}" readonly value="{Id}" name="{Id_Name}"></td> 
+                  <td><label for="Contentstates1State_{states1:rowNumber}" style="display: none;">State</label><input type="text" id="Contentstates1State_{states1:rowNumber}" maxlength="250" size="50" value="{State}" name="{State_Name}"></td> 
+                  <td><label for="Contentstates1Country_{states1:rowNumber}" style="display: none;">Country</label> 
+                    <select id="Contentstates1Country_{states1:rowNumber}" name="{Country_Name}">
+                      <option selected value="">Select Value</option>
+                      {Country_Options}
+                    </select>
+ </td> 
+                  <td><label for="Contentstates1SalesOffice_{states1:rowNumber}" style="display: none;">Sales Office</label> 
+                    <select id="Contentstates1SalesOffice_{states1:rowNumber}" name="{SalesOffice_Name}">
+                      <option selected value="">Select Value</option>
+                      {SalesOffice_Options}
+                    </select>
+ </td> 
+                  <td><label for="Contentstates1IsActive_{states1:rowNumber}" style="display: none;">Is Active</label><input type="text" id="Contentstates1IsActive_{states1:rowNumber}" maxlength="10" size="10" value="{IsActive}" name="{IsActive_Name}"></td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="5">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td style="TEXT-ALIGN: right" colspan="5">
+                    <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+                    <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+                      <option selected value="">-</option>
+ {PageSize_Options}
+                    </select>
+ 
+                    <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirst.png"></a> <!-- END First_On -->
+                    <!-- BEGIN First_Off --><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirstOff.png"><!-- END First_Off -->
+                    <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrev.png"></a> <!-- END Prev_On -->
+                    <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrevOff.png"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+                    <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNext.png"></a> <!-- END Next_On -->
+                    <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNextOff.png"><!-- END Next_Off -->
+                    <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLast.png"></a> <!-- END Last_On -->
+                    <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLastOff.png"><!-- END Last_Off --></span><!-- END Navigator Navigator -->
+                    <!-- BEGIN Button Button_Submit --><input type="submit" id="Contentstates1Button_Submit" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit -->
+                    <!-- BEGIN Button Cancel --><input type="submit" id="Contentstates1Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Cancel --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END EditableGrid states1 --></td>
+  </tr>
+ 
+  <tr>
+    <td>
+      <p align="right">&nbsp;<a href="statesadd.php" class="Button">Add</a>&nbsp;<a href="statesdelete.php" class="Button">Delete</a></p>
+    </td>
+  </tr>
+</table>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->&nbsp; 

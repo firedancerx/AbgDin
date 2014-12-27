@@ -1,0 +1,657 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-1E47B4BB
+</script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-jquery-ui-calendar.css">
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Features CSS @1-DA2948EF
+</script>
+<style type="text/css">
+    .ContentPanel1reportsalesSearchs_Town-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+</style>
+<script type="text/javascript">
+//End Features CSS
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-C2B8F00C
+    $('body').ccsBind(function() {
+        features["ContentPanel1reportsalesSearchs_SalesDateInlineDatePicker1"] = $('*:ccsControl(Content, Panel1, reportsalesSearch, s_SalesDate)');
+        features["ContentPanel1reportsalesSearchs_TownAutocomplete1"] = $('*:ccsControl(Content, Panel1, reportsalesSearch, s_Town)');
+        features["ContentPanel1Panel2salesSalesDateInlineDatePicker1"] = $('*:ccsControl(Content, Panel1, Panel2, sales, SalesDate)');
+        features["ContentPanel1Panel2DialogPanel1"] = $('*:ccsControl(Content, Panel1, Panel2)');
+        features["ContentPanel1UpdatePanel1"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1condition_for_show"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1condition_for_hide"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_link_Condition"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_submit_Condition"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_others_Condition"] = $('*:ccsControl(Content, Panel1)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-FDF67393
+    params["ContentPanel1reportsalesSearchs_SalesDateInlineDatePicker1"] = { 
+        dateFormat: "dd/MM/yyyy",
+        isWeekend: true
+    };
+    params["ContentPanel1reportsalesSearchs_TownAutocomplete1"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentPanel1reportsalesSearchs_Town-autocomplete",
+        source: "services/reportsales_s_Town_Autocomplete1.php"
+    };
+    params["ContentPanel1Panel2salesSalesDateInlineDatePicker1"] = { 
+        dateFormat: "GeneralDate",
+        isWeekend: true
+    };
+    params["ContentPanel1Panel2DialogPanel1"] = { 
+        title: " Sales",
+        modal: true,
+        autoOpen: false
+    };
+    params["ContentPanel1UpdatePanel1"] = {
+        name: "ContentPanel1"
+    };
+//End Feature Parameters
+
+//Feature Init @1-5EC378E2
+    features["ContentPanel1reportsalesSearchs_SalesDateInlineDatePicker1"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentPanel1reportsalesSearchs_SalesDateInlineDatePicker1"]);
+    });
+    features["ContentPanel1reportsalesSearchs_TownAutocomplete1"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentPanel1reportsalesSearchs_TownAutocomplete1"]);
+    });
+    features["ContentPanel1Panel2salesSalesDateInlineDatePicker1"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentPanel1Panel2salesSalesDateInlineDatePicker1"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.ccsDialog(params["ContentPanel1Panel2DialogPanel1"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.ccsUpdatePanel(params["ContentPanel1UpdatePanel1"]);
+    });
+//End Feature Init
+
+//DialogPanel1 show Entry Point @156-94F59FFD
+    actions["ContentPanel1Panel2DialogPanel1_show"] = function () {
+        features["ContentPanel1Panel2DialogPanel1"].ccsDialog("show");
+        return false;
+    };
+//End DialogPanel1 show Entry Point
+
+//DialogPanel1 hide Entry Point @156-80C22A5C
+    actions["ContentPanel1Panel2DialogPanel1_hide"] = function () {
+        features["ContentPanel1Panel2DialogPanel1"].ccsDialog("hide");
+    };
+//End DialogPanel1 hide Entry Point
+
+//condition_for_show start Entry Point Start @124-10FC468A
+    actions["ContentPanel1condition_for_show_start"] = function (eventType, parameters) {
+//End condition_for_show start Entry Point Start
+
+//condition_for_show start Entry Point Body @124-554DBAD1
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] == "link")) {
+            self.trigger($.Event("true.condition_for_show"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_show"), {});
+        }
+//End condition_for_show start Entry Point Body
+
+//condition_for_show start Entry Point End @124-6A43FC60
+    };
+//End condition_for_show start Entry Point End
+
+//condition_for_hide start Entry Point Start @130-0CB811BA
+    actions["ContentPanel1condition_for_hide_start"] = function (eventType, parameters) {
+//End condition_for_hide start Entry Point Start
+
+//condition_for_hide start Entry Point Body @130-9FA0C383
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] == "submit" && $("#ErrorBlock").length == 0)) {
+            self.trigger($.Event("true.condition_for_hide"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_hide"), {});
+        }
+//End condition_for_hide start Entry Point Body
+
+//condition_for_hide start Entry Point End @130-6A43FC60
+    };
+//End condition_for_hide start Entry Point End
+
+//ccc_link_Condition start Entry Point Start @136-06B04180
+    actions["ContentPanel1ccc_link_Condition_start"] = function (eventType, parameters) {
+//End ccc_link_Condition start Entry Point Start
+
+//ccc_link_Condition start Entry Point Body @136-BF4FE5F8
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "link")) {
+            self.trigger($.Event("true.ccc_link_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_link_Condition"), {});
+        }
+//End ccc_link_Condition start Entry Point Body
+
+//ccc_link_Condition start Entry Point End @136-6A43FC60
+    };
+//End ccc_link_Condition start Entry Point End
+
+//ccc_submit_Condition start Entry Point Start @149-B8C1C859
+    actions["ContentPanel1ccc_submit_Condition_start"] = function (eventType, parameters) {
+//End ccc_submit_Condition start Entry Point Start
+
+//ccc_submit_Condition start Entry Point Body @149-089D9D8D
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "submit")) {
+            self.trigger($.Event("true.ccc_submit_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_submit_Condition"), {});
+        }
+//End ccc_submit_Condition start Entry Point Body
+
+//ccc_submit_Condition start Entry Point End @149-6A43FC60
+    };
+//End ccc_submit_Condition start Entry Point End
+
+//ccc_others_Condition start Entry Point Start @167-3FDEE698
+    actions["ContentPanel1ccc_others_Condition_start"] = function (eventType, parameters) {
+//End ccc_others_Condition start Entry Point Start
+
+//ccc_others_Condition start Entry Point Body @167-2D075684
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "")) {
+            self.trigger($.Event("true.ccc_others_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_others_Condition"), {});
+        }
+//End ccc_others_Condition start Entry Point Body
+
+//ccc_others_Condition start Entry Point End @167-6A43FC60
+    };
+//End ccc_others_Condition start Entry Point End
+
+//ContentPanel1Panel2salesButton_DeleteOnClick Event Start @-602851D9
+    actions["ContentPanel1Panel2salesButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End ContentPanel1Panel2salesButton_DeleteOnClick Event Start
+
+//Confirmation Message @107-8243B274
+        return confirm('Delete record?');
+//End Confirmation Message
+
+//ContentPanel1Panel2salesButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End ContentPanel1Panel2salesButton_DeleteOnClick Event End
+
+//Event Binding @1-FA90665A
+    features["ContentPanel1condition_for_show"].ccsBind(function() {
+        this.bind("true.condition_for_show", actions["ContentPanel1Panel2DialogPanel1_show"]);
+    });
+    features["ContentPanel1condition_for_hide"].ccsBind(function() {
+        this.bind("true.condition_for_hide", actions["ContentPanel1Panel2DialogPanel1_hide"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["ContentPanel1condition_for_show_start"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["ContentPanel1condition_for_hide_start"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("show.ccsDialog", actions["ContentPanel1ccc_others_Condition_start"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("hide.ccsDialog", actions["ContentPanel1ccc_others_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, reportsales1, reportsales1_Insert)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1ccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, reportsales1, Id)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1ccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, sales)').ccsBind(function() {
+        this.bind("submit", actions["ContentPanel1ccc_submit_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, sales, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1Panel2salesButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-AEA649AB
+    $('*:ccsControl(Content, Panel1, Panel2, sales, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, sales, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Product_FuelSaver</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp;&nbsp;&nbsp; 
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record reportsalesSearch -->
+<form id="ContentPanel1reportsalesSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Search </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1reportsalesSearchs_SalesDate">Sales Date</label></td> 
+            <td><input type="text" id="ContentPanel1reportsalesSearchs_SalesDate" maxlength="100" size="10" value="{s_SalesDate}" name="{s_SalesDate_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1reportsalesSearchs_SalesUser">Sales User</label></td> 
+            <td>
+              <select id="ContentPanel1reportsalesSearchs_SalesUser" name="{s_SalesUser_Name}">
+                <option selected value="">Select Value</option>
+ {s_SalesUser_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1reportsalesSearchs_SalesItem">Product</label></td> 
+            <td>
+              <select id="ContentPanel1reportsalesSearchs_SalesItem" name="{s_SalesItem_Name}">
+                <option selected value="">Select Value</option>
+ {s_SalesItem_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1reportsalesSearchs_Town">Town</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_Town --><input type="text" id="ContentPanel1reportsalesSearchs_Town" maxlength="250" size="50" value="{s_Town}" name="{s_Town_Name}"><!-- END TextBox s_Town --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1reportsalesSearchs_StateId">State Id</label></td> 
+            <td>
+              <select id="ContentPanel1reportsalesSearchs_StateId" name="{s_StateId_Name}">
+                <option selected value="">Select Value</option>
+ {s_StateId_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1reportsalesSearchs_CountryId">Country Id</label></td> 
+            <td>
+              <select id="ContentPanel1reportsalesSearchs_CountryId" name="{s_CountryId_Name}">
+                <option selected value="">Select Value</option>
+ {s_CountryId_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1reportsalesSearchreportsalesPageSize">Records per page</label></td> 
+            <td>
+              <select id="ContentPanel1reportsalesSearchreportsalesPageSize" name="{reportsalesPageSize_Name}">
+                {reportsalesPageSize_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentPanel1reportsalesSearchButton_DoSearch" class="Button" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record reportsalesSearch --><br>
+<!-- BEGIN Grid reportsales1 -->
+<table id="ContentPanel1reportsales1" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          <td class="th"><strong>Sales Report </strong></td> 
+          <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="19">Total Records:&nbsp;{reportsales1_TotalRecords}</td> 
+        </tr>
+ 
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Id --><span class="Sorter">Id 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_Id"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_Id"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Id --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SalesDate --><span class="Sorter">Sales Date 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_SalesDate"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_SalesDate"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_SalesDate --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserId --><span class="Sorter">User Id 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_UserId"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_UserId"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserId --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Product --><span class="Sorter">Product 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_Product"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_Product"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Product --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SalesQuantity --><span class="Sorter">Sales Quantity 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_SalesQuantity"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_SalesQuantity"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_SalesQuantity --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SalesPrice --><span class="Sorter">Sales Price 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_SalesPrice"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_SalesPrice"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_SalesPrice --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SalesValue --><span class="Sorter">Sales Value 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_SalesValue"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_SalesValue"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_SalesValue --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_email --><span class="Sorter">Email 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_email"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_email"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_email --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_telephone --><span class="Sorter">Telephone 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_telephone"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_telephone"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_telephone --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Town --><span class="Sorter">Town 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_Town"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_Town"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Town --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_State --><span class="Sorter">State 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_State"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_State"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_State --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Country --><span class="Sorter">Country 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_Country"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_Country"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Country --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SalesOffice --><span class="Sorter">Sales Office 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_SalesOffice"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_SalesOffice"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_SalesOffice --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_IsActive --><span class="Sorter">Is Active 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_IsActive"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_IsActive"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_IsActive --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SalesUser --><span class="Sorter">Sales User 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_SalesUser"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_SalesUser"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_SalesUser --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SalesItem --><span class="Sorter">Sales Item 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_SalesItem"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_SalesItem"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_SalesItem --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_StateId --><span class="Sorter">State Id 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_StateId"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_StateId"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_StateId --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_CountryId --><span class="Sorter">Country Id 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_CountryId"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_CountryId"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_CountryId --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SalesOfficeId --><span class="Sorter">Sales Office Id 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1reportsales1Sorter_SalesOfficeId"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1reportsales1Sorter_SalesOfficeId"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_SalesOfficeId --></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{Id_Src}" id="ContentPanel1reportsales1Id_{reportsales1:rowNumber}">{Id}</a>&nbsp;</td> 
+          <td>{SalesDate}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{UserId}&nbsp;</td> 
+          <td>{Product}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SalesQuantity}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SalesPrice}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SalesValue}&nbsp;</td> 
+          <td>{email}&nbsp;</td> 
+          <td>{telephone}&nbsp;</td> 
+          <td>{Town}&nbsp;</td> 
+          <td>{State}&nbsp;</td> 
+          <td>{Country}&nbsp;</td> 
+          <td>{SalesOffice}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{IsActive}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SalesUser}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SalesItem}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{StateId}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{CountryId}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SalesOfficeId}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="19">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="19"><a href="{reportsales1_Insert_Src}" id="ContentPanel1reportsales1reportsales1_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+              <option selected value="">-</option>
+ {PageSize_Options} 
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirst.png"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirstOff.png"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrev.png"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrevOff.png"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNext.png"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNextOff.png"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLast.png"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLastOff.png"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid reportsales1 --><br>
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record sales -->
+<form id="ContentPanel1Panel2sales" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Sales</strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2salesSalesDate">Date</label></td> 
+            <td><input type="text" id="ContentPanel1Panel2salesSalesDate" maxlength="100" size="10" value="{SalesDate}" name="{SalesDate_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2salesSalesUser">Sales User</label></td> 
+            <td>
+              <select id="ContentPanel1Panel2salesSalesUser" name="{SalesUser_Name}">
+                <option selected value="">Select Value</option>
+ {SalesUser_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2salesSalesItem">Product</label></td> 
+            <td>
+              <select id="ContentPanel1Panel2salesSalesItem" name="{SalesItem_Name}">
+                <option selected value="">Select Value</option>
+ {SalesItem_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2salesSalesQuantity">Quantity</label></td> 
+            <td><input type="text" id="ContentPanel1Panel2salesSalesQuantity" maxlength="12" size="10" value="{SalesQuantity}" name="{SalesQuantity_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2salesSalesPrice">Unit Price</label></td> 
+            <td><input type="text" id="ContentPanel1Panel2salesSalesPrice" maxlength="12" size="12" value="{SalesPrice}" name="{SalesPrice_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2salesSalesValue">Amount</label></td> 
+            <td><input type="text" id="ContentPanel1Panel2salesSalesValue" maxlength="12" size="12" value="{SalesValue}" name="{SalesValue_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2salesSalesOffice">Sales Office</label></td> 
+            <td>
+              <select id="ContentPanel1Panel2salesSalesOffice" name="{SalesOffice_Name}">
+                <option selected value="">Select Value</option>
+ {SalesOffice_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2salesSalesRemarks">Remarks</label></td> 
+            <td><textarea id="ContentPanel1Panel2salesSalesRemarks" rows="3" cols="50" name="{SalesRemarks_Name}">{SalesRemarks}</textarea></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2salesIsActive">Is Active</label></td> 
+            <td><input type="checkbox" id="ContentPanel1Panel2salesIsActive" value="1" name="{IsActive_Name}" {IsActive}></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentPanel1Panel2salesButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="ContentPanel1Panel2salesButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentPanel1Panel2salesButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="ContentPanel1Panel2salesButton_Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record sales --><!-- END Panel Panel2 --><br>
+<!-- END Panel Panel1 --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar --><!-- END Panel HeaderSidebar -->&nbsp; 

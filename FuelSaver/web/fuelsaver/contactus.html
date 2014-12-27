@@ -1,0 +1,147 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-1E47B4BB
+</script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-jquery-ui-calendar.css">
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-6A5BCE4C
+    $('body').ccsBind(function() {
+        features["Contentcontactus1ContactDateInlineDatePicker1"] = $('*:ccsControl(Content, contactus1, ContactDate)');
+        features["Contentcontactus1ContactTimeInlineDatePicker2"] = $('*:ccsControl(Content, contactus1, ContactTime)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-3C8D97C2
+    params["Contentcontactus1ContactDateInlineDatePicker1"] = { 
+        dateFormat: "GeneralDate",
+        isWeekend: true
+    };
+    params["Contentcontactus1ContactTimeInlineDatePicker2"] = { 
+        dateFormat: "ShortDate",
+        isWeekend: true
+    };
+//End Feature Parameters
+
+//Feature Init @1-F67F0B30
+    features["Contentcontactus1ContactDateInlineDatePicker1"].ccsBind(function() {
+        this.ccsDateTimePicker(params["Contentcontactus1ContactDateInlineDatePicker1"]);
+    });
+    features["Contentcontactus1ContactTimeInlineDatePicker2"].ccsBind(function() {
+        this.ccsDateTimePicker(params["Contentcontactus1ContactTimeInlineDatePicker2"]);
+    });
+//End Feature Init
+
+//Plugin Calls @1-AF23B600
+    $('*:ccsControl(Content, contactus1, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Product_FuelSaver</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp; 
+<!-- BEGIN Record contactus1 -->
+<form id="Contentcontactus1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Contact Us </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Contentcontactus1ContactDate">Contact Date</label></td> 
+            <td><input type="text" id="Contentcontactus1ContactDate" maxlength="100" size="8" value="{ContactDate}" name="{ContactDate_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentcontactus1ContactTime">Contact Time</label></td> 
+            <td><input type="text" id="Contentcontactus1ContactTime" maxlength="100" size="8" value="{ContactTime}" name="{ContactTime_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentcontactus1ContactName">Contact Name</label></td> 
+            <td><input type="text" id="Contentcontactus1ContactName" maxlength="250" size="50" value="{ContactName}" name="{ContactName_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentcontactus1ContactEmail">Contact Email</label></td> 
+            <td><input type="text" id="Contentcontactus1ContactEmail" maxlength="250" size="50" value="{ContactEmail}" name="{ContactEmail_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentcontactus1ContactPhone">Contact Phone</label></td> 
+            <td><input type="text" id="Contentcontactus1ContactPhone" maxlength="250" size="50" value="{ContactPhone}" name="{ContactPhone_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentcontactus1ContactUser">Contact User</label></td> 
+            <td>
+              <select disabled id="Contentcontactus1ContactUser" name="{ContactUser_Name}">
+                <option selected value="">Select Value</option>
+                {ContactUser_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentcontactus1ContactSubject">Contact Subject</label></td> 
+            <td><input type="text" id="Contentcontactus1ContactSubject" maxlength="250" size="50" value="{ContactSubject}" name="{ContactSubject_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Contentcontactus1ContactContent">Contact Content</label></td> 
+            <td><textarea id="Contentcontactus1ContactContent" rows="3" cols="50" name="{ContactContent_Name}">{ContactContent}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="Contentcontactus1Button_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="Contentcontactus1Button_Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record contactus1 --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar -->{headerIncludablePage}<!-- END Panel HeaderSidebar -->

@@ -1,0 +1,71 @@
+
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Plugin Calls @1-83BFF735
+    $('*:ccsControl(Content, userroles, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Userroles</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record userroles -->
+<form id="Contentuserroles" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Add/Edit User Roles </h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentuserrolesErrorBlock">
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td><label for="ContentuserrolesUserRole">User Role</label></td> 
+      <td><input type="text" id="ContentuserrolesUserRole" maxlength="250" size="50" value="{UserRole}" name="{UserRole_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentuserrolesIsActive">Is Active</label></td> 
+      <td><input type="text" id="ContentuserrolesIsActive" maxlength="10" size="10" value="{IsActive}" name="{IsActive_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td style="TEXT-ALIGN: right" colspan="2">
+        <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentuserrolesButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input type="submit" id="ContentuserrolesButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentuserrolesButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record userroles --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->

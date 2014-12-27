@@ -1,0 +1,166 @@
+
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//End CCS script
+</script>
+<title>receipts</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record receiptsSearch -->
+<form id="ContentreceiptsSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Search </h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentreceiptsSearchErrorBlock">
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td><label for="ContentreceiptsSearchs_SalesOrder">Sales Order</label></td> 
+      <td>
+        <select id="ContentreceiptsSearchs_SalesOrder" name="{s_SalesOrder_Name}">
+          <option selected value="">Select Value</option>
+          {s_SalesOrder_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsSearchs_ReferenceId">Reference Id</label></td> 
+      <td><input type="text" id="ContentreceiptsSearchs_ReferenceId" maxlength="250" size="50" value="{s_ReferenceId}" name="{s_ReferenceId_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsSearchs_VerifiedBy">Verified By</label></td> 
+      <td>
+        <select id="ContentreceiptsSearchs_VerifiedBy" name="{s_VerifiedBy_Name}">
+          <option selected value="">Select Value</option>
+          {s_VerifiedBy_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td style="TEXT-ALIGN: right" colspan="2">
+        <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentreceiptsSearchButton_DoSearch" class="Button" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record receiptsSearch --><br>
+<!-- BEGIN Grid receipts -->
+<h2>List of Receipts</h2>
+<table>
+  <tr>
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_Id --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_Id">Id</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_Id --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_TempReceiptNo --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_TempReceiptNo">Temp Receipt No</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_TempReceiptNo --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_ReceiptNo --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_ReceiptNo">Receipt No</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ReceiptNo --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_ReceiptDate --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_ReceiptDate">Receipt Date</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ReceiptDate --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_ReceiptTime --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_ReceiptTime">Receipt Time</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ReceiptTime --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_SalesRemarks --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_SalesRemarks">Sales Remarks</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_SalesRemarks --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_ReceiptAmount --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_ReceiptAmount">Receipt Amount</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ReceiptAmount --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_ReferenceId --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_ReferenceId">Reference Id</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ReferenceId --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_VerifiedAmount --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_VerifiedAmount">Verified Amount</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_VerifiedAmount --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_UserId --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_UserId">User Id</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_UserId --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_IsActive --><span class="Sorter"><a href="{Sort_URL}" id="ContentreceiptsSorter_IsActive">Is Active</a> 
+    <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_IsActive --></th>
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr>
+    <td style="TEXT-ALIGN: right"><a href="{Id_Src}" id="ContentreceiptsId_{receipts:rowNumber}">{Id}</a>&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{TempReceiptNo}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{ReceiptNo}&nbsp;</td> 
+    <td>{ReceiptDate}&nbsp;</td> 
+    <td>{ReceiptTime}&nbsp;</td> 
+    <td>{SalesRemarks}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{ReceiptAmount}&nbsp;</td> 
+    <td>{ReferenceId}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{VerifiedAmount}&nbsp;</td> 
+    <td>{UserId}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{IsActive}&nbsp;</td>
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td colspan="11">No records</td>
+  </tr>
+  <!-- END NoRecords -->
+  <tr>
+    <td colspan="11"><a href="{receipts_Insert_Src}" id="Contentreceiptsreceipts_Insert">Add New</a>&nbsp; 
+      <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+      <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+        <option selected value="">-</option>
+ {PageSize_Options}
+      </select>
+ 
+      <!-- BEGIN First_On --><a href="{First_URL}">|&lt;</a> <!-- END First_On -->
+      <!-- BEGIN First_Off -->|&lt; <!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt;</a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off -->&lt;&lt; <!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt;</a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off -->&gt;&gt; <!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;|</a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off -->&gt;| <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+  </tr>
+</table>
+<!-- END Grid receipts --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->

@@ -1,0 +1,204 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-1E47B4BB
+</script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-jquery-ui-calendar.css">
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-3896E474
+    $('body').ccsBind(function() {
+        features["ContentsalesSalesDateInlineDatePicker1"] = $('*:ccsControl(Content, sales, SalesDate)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-A190061A
+    params["ContentsalesSalesDateInlineDatePicker1"] = { 
+        dateFormat: "dd/MM/yyyy",
+        isWeekend: true
+    };
+//End Feature Parameters
+
+//Feature Init @1-4B543826
+    features["ContentsalesSalesDateInlineDatePicker1"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentsalesSalesDateInlineDatePicker1"]);
+    });
+//End Feature Init
+
+//Plugin Calls @1-41500A81
+    $('*:ccsControl(Content, sales, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+
+
+//DEL          // -------------------------
+//DEL          // Write your own code here.
+//DEL          // -------------------------
+//DEL  
+//DEL  if (window.XMLHttpRequest) {
+//DEL    
+//DEL         // code for IE7+, Firefox, Chrome, Opera, Safari
+//DEL   
+//DEL         xmlhttp=new XMLHttpRequest(); }
+//DEL   
+//DEL  else {
+//DEL    
+//DEL         // code for IE6, IE5
+//DEL    
+//DEL         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); }
+//DEL    
+//DEL         xmlhttp.onreadystatechange=function() {
+//DEL    
+//DEL         if (xmlhttp.readyState==4 && xmlhttp.status==200)
+//DEL    
+//DEL            { Contentsales.SalesPrice.value = xmlhttp.responseText;
+//DEL    
+//DEL              Contentsales.SalesValue.value =         
+//DEL              Contentsales.SalesQuantity.value * Contentsales.SalesPrice.value;
+//DEL               
+//DEL             } };
+//DEL    
+//DEL  xmlhttp.open("GET","test/unitprice.php?productid=" + Contentsales.SalesItem.value,true);
+//DEL    
+//DEL  xmlhttp.send(); 
+//DEL    
+
+
+//DEL          // -------------------------
+//DEL          // Write your own code here.
+//DEL          // -------------------------
+//DEL          Contentsales.SalesValue.value = Contentsales.SalesQuantity.value * Contentsales.SalesPrice.value;
+
+
+//DEL          // -------------------------
+//DEL          // Write your own code here.
+//DEL          // -------------------------
+//DEL          Contentsales.SalesValue.value = Contentsales.SalesQuantity.value * Contentsales.SalesPrice.value;
+
+           
+
+//End CCS script
+</script>
+<title>Product_FuelSaver</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content --><br>
+&nbsp; 
+<!-- BEGIN Record sales -->
+<form id="Contentsales" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Add/Edit Sales </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ContentsalesSalesDate">Sales Date</label></td> 
+            <td><input type="text" id="ContentsalesSalesDate" readonly maxlength="100" size="10" value="{SalesDate}" name="{SalesDate_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentsalesSalesUser">Sales User</label></td> 
+            <td>
+              <select disabled id="ContentsalesSalesUser" name="{SalesUser_Name}">
+                <option selected value="">Select Value</option>
+                {SalesUser_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentsalesSalesItem">Sales Item</label></td> 
+            <td>
+              <select id="ContentsalesSalesItem" name="{SalesItem_Name}">
+                <option selected value="">Select Value</option>
+                {SalesItem_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentsalesSalesQuantity">Sales Quantity</label></td> 
+            <td><input type="text" id="ContentsalesSalesQuantity" maxlength="12" size="12" value="{SalesQuantity}" name="{SalesQuantity_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentsalesSalesPrice">Sales Price</label></td> 
+            <td><input type="text" id="ContentsalesSalesPrice" maxlength="12" size="12" value="{SalesPrice}" name="{SalesPrice_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentsalesSalesValue">Sales Value</label></td> 
+            <td><input type="text" id="ContentsalesSalesValue" maxlength="12" size="12" value="{SalesValue}" name="{SalesValue_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentsalesSalesRemarks">Sales Remarks</label></td> 
+            <td><textarea id="ContentsalesSalesRemarks" rows="3" cols="50" name="{SalesRemarks_Name}">{SalesRemarks}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentsalesSalesOffice">Sales Office</label></td> 
+            <td>
+              <select disabled id="ContentsalesSalesOffice" name="{SalesOffice_Name}">
+                <option selected value="">Select Value</option>
+                {SalesOffice_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Is Active</td> 
+            <td>
+              <!-- BEGIN RadioButton IsActive --><input type="radio" id="ContentsalesIsActive_{IsActive:optionNumber}" value="{Value}" name="{IsActive_Name}" {Check}><label for="ContentsalesIsActive_{IsActive:optionNumber}">{Description}</label><!-- END RadioButton IsActive --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentsalesButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="ContentsalesButton_Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record sales --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->&nbsp; 

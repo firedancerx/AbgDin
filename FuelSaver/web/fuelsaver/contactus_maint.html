@@ -1,0 +1,186 @@
+
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-1E47B4BB
+</script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-jquery-ui-calendar.css">
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-7B381E11
+    $('body').ccsBind(function() {
+        features["ContentcontactusContactDateInlineDatePicker1"] = $('*:ccsControl(Content, contactus, ContactDate)');
+        features["ContentcontactusContactTimeInlineDatePicker2"] = $('*:ccsControl(Content, contactus, ContactTime)');
+        features["ContentcontactusContactReplyDateInlineDatePicker3"] = $('*:ccsControl(Content, contactus, ContactReplyDate)');
+        features["ContentcontactusContactReplyTimeInlineDatePicker4"] = $('*:ccsControl(Content, contactus, ContactReplyTime)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-2856A569
+    params["ContentcontactusContactDateInlineDatePicker1"] = { 
+        dateFormat: "ShortDate",
+        isWeekend: true
+    };
+    params["ContentcontactusContactTimeInlineDatePicker2"] = { 
+        dateFormat: "ShortDate",
+        isWeekend: true
+    };
+    params["ContentcontactusContactReplyDateInlineDatePicker3"] = { 
+        dateFormat: "ShortDate",
+        isWeekend: true
+    };
+    params["ContentcontactusContactReplyTimeInlineDatePicker4"] = { 
+        dateFormat: "ShortDate",
+        isWeekend: true
+    };
+//End Feature Parameters
+
+//Feature Init @1-05631D24
+    features["ContentcontactusContactDateInlineDatePicker1"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentcontactusContactDateInlineDatePicker1"]);
+    });
+    features["ContentcontactusContactTimeInlineDatePicker2"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentcontactusContactTimeInlineDatePicker2"]);
+    });
+    features["ContentcontactusContactReplyDateInlineDatePicker3"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentcontactusContactReplyDateInlineDatePicker3"]);
+    });
+    features["ContentcontactusContactReplyTimeInlineDatePicker4"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentcontactusContactReplyTimeInlineDatePicker4"]);
+    });
+//End Feature Init
+
+//Plugin Calls @1-B55E7C7B
+    $('*:ccsControl(Content, contactus, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Contactus</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record contactus -->
+<form id="Contentcontactus" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Contact&nbsp;Us </h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentcontactusErrorBlock">
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td><label for="ContentcontactusId">Id</label></td> 
+      <td><input type="text" id="ContentcontactusId" maxlength="10" size="10" value="{Id}" name="{Id_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactDate">Contact Date</label></td> 
+      <td><input type="text" id="ContentcontactusContactDate" maxlength="100" size="10" value="{ContactDate}" name="{ContactDate_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactTime">Contact Time</label></td> 
+      <td><input type="text" id="ContentcontactusContactTime" maxlength="100" size="10" value="{ContactTime}" name="{ContactTime_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactName">Contact Name</label></td> 
+      <td><input type="text" id="ContentcontactusContactName" maxlength="250" size="50" value="{ContactName}" name="{ContactName_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactEmail">Contact Email</label></td> 
+      <td><input type="text" id="ContentcontactusContactEmail" maxlength="250" size="50" value="{ContactEmail}" name="{ContactEmail_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactPhone">Contact Phone</label></td> 
+      <td><input type="text" id="ContentcontactusContactPhone" maxlength="250" size="50" value="{ContactPhone}" name="{ContactPhone_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactUser">Contact User</label></td> 
+      <td>
+        <select id="ContentcontactusContactUser" name="{ContactUser_Name}">
+          <option selected value="">Select Value</option>
+          {ContactUser_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactSubject">Contact Subject</label></td> 
+      <td><input type="text" id="ContentcontactusContactSubject" maxlength="250" size="50" value="{ContactSubject}" name="{ContactSubject_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactContent">Contact Content</label></td> 
+      <td><input type="text" id="ContentcontactusContactContent" maxlength="250" size="50" value="{ContactContent}" name="{ContactContent_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactReplyDate">Contact Reply Date</label></td> 
+      <td><input type="text" id="ContentcontactusContactReplyDate" maxlength="100" size="10" value="{ContactReplyDate}" name="{ContactReplyDate_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactReplyTime">Contact Reply Time</label></td> 
+      <td><input type="text" id="ContentcontactusContactReplyTime" maxlength="100" size="10" value="{ContactReplyTime}" name="{ContactReplyTime_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactReplyBy">Contact Reply By</label></td> 
+      <td>
+        <select id="ContentcontactusContactReplyBy" name="{ContactReplyBy_Name}">
+          <option selected value="">Select Value</option>
+          {ContactReplyBy_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusContactReplyContent">Contact Reply Content</label></td> 
+      <td><input type="text" id="ContentcontactusContactReplyContent" maxlength="250" size="50" value="{ContactReplyContent}" name="{ContactReplyContent_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentcontactusIsActive">Is Active</label></td> 
+      <td><input type="text" id="ContentcontactusIsActive" maxlength="10" size="10" value="{IsActive}" name="{IsActive_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td style="TEXT-ALIGN: right" colspan="2">
+        <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentcontactusButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input type="submit" id="ContentcontactusButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentcontactusButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record contactus --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->

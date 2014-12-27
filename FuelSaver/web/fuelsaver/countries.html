@@ -1,0 +1,144 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Contentcountries1Button_SubmitOnClick Event Start @-890A2415
+    actions["Contentcountries1Button_SubmitOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End Contentcountries1Button_SubmitOnClick Event Start
+
+//Confirmation Message @19-257FDD03
+        return confirm('Submit records?');
+//End Confirmation Message
+
+//Contentcountries1Button_SubmitOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End Contentcountries1Button_SubmitOnClick Event End
+
+//Event Binding @1-24C061E4
+    $('*:ccsControl(Content, countries1, Button_Submit)').ccsBind(function() {
+        this.bind("click", actions["Contentcountries1Button_SubmitOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-3DBF1B04
+    $('*:ccsControl(Content, countries1, Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Product_FuelSaver</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp; 
+<!-- BEGIN EditableGrid countries1 -->
+<form id="Contentcountries1" method="post" name="{HTMLFormName}" action="{Action}">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Add/Edit Countries </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="3">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_Country --><span class="Sorter"><a href="{Sort_URL}" id="Contentcountries1Sorter_Country">Country</a> 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_Country --></th>
+ 
+            <th scope="col">
+            <!-- BEGIN Sorter Sorter_IsActive --><span class="Sorter"><a href="{Sort_URL}" id="Contentcountries1Sorter_IsActive">Is Active</a> 
+            <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_IsActive --></th>
+ 
+            <th scope="col">Delete</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="3">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td><label for="Contentcountries1Country_{countries1:rowNumber}" style="display: none;">Country</label><input type="text" id="Contentcountries1Country_{countries1:rowNumber}" maxlength="250" size="50" value="{Country}" name="{Country_Name}"></td> 
+            <td><label for="Contentcountries1IsActive_{countries1:rowNumber}" style="display: none;">Is Active</label><input type="checkbox" id="Contentcountries1IsActive_{countries1:rowNumber}" value="1" name="{IsActive_Name}" {IsActive}></td> 
+            <td>
+              <!-- BEGIN Panel CheckBox_Delete_Panel --><label for="Contentcountries1CheckBox_Delete_PanelCheckBox_Delete_{countries1:rowNumber}" style="display: none;">Delete</label> 
+              <!-- BEGIN CheckBox CheckBox_Delete --><input type="checkbox" id="Contentcountries1CheckBox_Delete_PanelCheckBox_Delete_{countries1:rowNumber}" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete --><!-- END Panel CheckBox_Delete_Panel -->&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="3">No records</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="3">
+              <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+              <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+                <option selected value="">-</option>
+ {PageSize_Options}
+              </select>
+ 
+              <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->First <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Last <!-- END Last_Off --></span><!-- END Navigator Navigator -->
+              <!-- BEGIN Button Button_Submit --><input type="submit" id="Contentcountries1Button_Submit" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit -->
+              <!-- BEGIN Button Cancel --><input type="submit" id="Contentcountries1Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid countries1 --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->&nbsp; 

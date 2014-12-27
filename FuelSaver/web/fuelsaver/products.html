@@ -1,0 +1,491 @@
+
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-F9B79976
+</script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}jquery-ui.css">
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Features CSS @1-E028078B
+</script>
+<style type="text/css">
+    .ContentPanel1productlistSearchs_InventoryItem-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .ContentPanel1productlistSearchs_IsActive-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+</style>
+<script type="text/javascript">
+//End Features CSS
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-883A6729
+    $('body').ccsBind(function() {
+        features["ContentPanel1productlistSearchs_InventoryItemAutocomplete1"] = $('*:ccsControl(Content, Panel1, productlistSearch, s_InventoryItem)');
+        features["ContentPanel1productlistSearchs_IsActiveAutocomplete2"] = $('*:ccsControl(Content, Panel1, productlistSearch, s_IsActive)');
+        features["ContentPanel1Panel2DialogPanel1"] = $('*:ccsControl(Content, Panel1, Panel2)');
+        features["ContentPanel1UpdatePanel1"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1condition_for_show"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1condition_for_hide"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_link_Condition"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_submit_Condition"] = $('*:ccsControl(Content, Panel1)');
+        features["ContentPanel1ccc_others_Condition"] = $('*:ccsControl(Content, Panel1)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-E20B5CF1
+    params["ContentPanel1productlistSearchs_InventoryItemAutocomplete1"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentPanel1productlistSearchs_InventoryItem-autocomplete",
+        source: "services/products_s_InventoryItem_Autocomplete1.php"
+    };
+    params["ContentPanel1productlistSearchs_IsActiveAutocomplete2"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentPanel1productlistSearchs_IsActive-autocomplete",
+        source: "services/products_s_IsActive_Autocomplete1.php"
+    };
+    params["ContentPanel1Panel2DialogPanel1"] = { 
+        title: " Add/Edit Inventoryitem ",
+        modal: true,
+        autoOpen: false
+    };
+    params["ContentPanel1UpdatePanel1"] = {
+        name: "ContentPanel1"
+    };
+//End Feature Parameters
+
+//Feature Init @1-F7DC9F39
+    features["ContentPanel1productlistSearchs_InventoryItemAutocomplete1"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentPanel1productlistSearchs_InventoryItemAutocomplete1"]);
+    });
+    features["ContentPanel1productlistSearchs_IsActiveAutocomplete2"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentPanel1productlistSearchs_IsActiveAutocomplete2"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.ccsDialog(params["ContentPanel1Panel2DialogPanel1"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.ccsUpdatePanel(params["ContentPanel1UpdatePanel1"]);
+    });
+//End Feature Init
+
+//DialogPanel1 show Entry Point @101-94F59FFD
+    actions["ContentPanel1Panel2DialogPanel1_show"] = function () {
+        features["ContentPanel1Panel2DialogPanel1"].ccsDialog("show");
+        return false;
+    };
+//End DialogPanel1 show Entry Point
+
+//DialogPanel1 hide Entry Point @101-80C22A5C
+    actions["ContentPanel1Panel2DialogPanel1_hide"] = function () {
+        features["ContentPanel1Panel2DialogPanel1"].ccsDialog("hide");
+    };
+//End DialogPanel1 hide Entry Point
+
+//condition_for_show start Entry Point Start @69-10FC468A
+    actions["ContentPanel1condition_for_show_start"] = function (eventType, parameters) {
+//End condition_for_show start Entry Point Start
+
+//condition_for_show start Entry Point Body @69-554DBAD1
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] == "link")) {
+            self.trigger($.Event("true.condition_for_show"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_show"), {});
+        }
+//End condition_for_show start Entry Point Body
+
+//condition_for_show start Entry Point End @69-6A43FC60
+    };
+//End condition_for_show start Entry Point End
+
+//condition_for_hide start Entry Point Start @75-0CB811BA
+    actions["ContentPanel1condition_for_hide_start"] = function (eventType, parameters) {
+//End condition_for_hide start Entry Point Start
+
+//condition_for_hide start Entry Point Body @75-9FA0C383
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] == "submit" && $("#ErrorBlock").length == 0)) {
+            self.trigger($.Event("true.condition_for_hide"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_hide"), {});
+        }
+//End condition_for_hide start Entry Point Body
+
+//condition_for_hide start Entry Point End @75-6A43FC60
+    };
+//End condition_for_hide start Entry Point End
+
+//ccc_link_Condition start Entry Point Start @81-06B04180
+    actions["ContentPanel1ccc_link_Condition_start"] = function (eventType, parameters) {
+//End ccc_link_Condition start Entry Point Start
+
+//ccc_link_Condition start Entry Point Body @81-BF4FE5F8
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "link")) {
+            self.trigger($.Event("true.ccc_link_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_link_Condition"), {});
+        }
+//End ccc_link_Condition start Entry Point Body
+
+//ccc_link_Condition start Entry Point End @81-6A43FC60
+    };
+//End ccc_link_Condition start Entry Point End
+
+//ccc_submit_Condition start Entry Point Start @94-B8C1C859
+    actions["ContentPanel1ccc_submit_Condition_start"] = function (eventType, parameters) {
+//End ccc_submit_Condition start Entry Point Start
+
+//ccc_submit_Condition start Entry Point Body @94-089D9D8D
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "submit")) {
+            self.trigger($.Event("true.ccc_submit_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_submit_Condition"), {});
+        }
+//End ccc_submit_Condition start Entry Point Body
+
+//ccc_submit_Condition start Entry Point End @94-6A43FC60
+    };
+//End ccc_submit_Condition start Entry Point End
+
+//ccc_others_Condition start Entry Point Start @112-3FDEE698
+    actions["ContentPanel1ccc_others_Condition_start"] = function (eventType, parameters) {
+//End ccc_others_Condition start Entry Point Start
+
+//ccc_others_Condition start Entry Point Body @112-2D075684
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content, Panel1)");
+        if (true==(params["click"] = "")) {
+            self.trigger($.Event("true.ccc_others_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_others_Condition"), {});
+        }
+//End ccc_others_Condition start Entry Point Body
+
+//ccc_others_Condition start Entry Point End @112-6A43FC60
+    };
+//End ccc_others_Condition start Entry Point End
+
+//ContentPanel1Panel2inventoryitemButton_DeleteOnClick Event Start @-9B4FC6AC
+    actions["ContentPanel1Panel2inventoryitemButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End ContentPanel1Panel2inventoryitemButton_DeleteOnClick Event Start
+
+//Confirmation Message @58-8243B274
+        return confirm('Delete record?');
+//End Confirmation Message
+
+//ContentPanel1Panel2inventoryitemButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End ContentPanel1Panel2inventoryitemButton_DeleteOnClick Event End
+
+//Event Binding @1-2F49A4EC
+    features["ContentPanel1condition_for_show"].ccsBind(function() {
+        this.bind("true.condition_for_show", actions["ContentPanel1Panel2DialogPanel1_show"]);
+    });
+    features["ContentPanel1condition_for_hide"].ccsBind(function() {
+        this.bind("true.condition_for_hide", actions["ContentPanel1Panel2DialogPanel1_hide"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["ContentPanel1condition_for_show_start"]);
+    });
+    features["ContentPanel1UpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["ContentPanel1condition_for_hide_start"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("show.ccsDialog", actions["ContentPanel1ccc_others_Condition_start"]);
+    });
+    features["ContentPanel1Panel2DialogPanel1"].ccsBind(function() {
+        this.bind("hide.ccsDialog", actions["ContentPanel1ccc_others_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, productlist, productlist_Insert)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1ccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, productlist, Id)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1ccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, inventoryitem)').ccsBind(function() {
+        this.bind("submit", actions["ContentPanel1ccc_submit_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, inventoryitem, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel1Panel2inventoryitemButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-753B4A21
+    $('*:ccsControl(Content, Panel1, Panel2, inventoryitem, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(Content, Panel1, Panel2, inventoryitem, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Product_FuelSaver</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record productlistSearch -->
+<form id="ContentPanel1productlistSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Search </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1productlistSearchs_InventoryItem">Inventory Item</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_InventoryItem --><input type="text" id="ContentPanel1productlistSearchs_InventoryItem" maxlength="250" size="50" value="{s_InventoryItem}" name="{s_InventoryItem_Name}"><!-- END TextBox s_InventoryItem --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1productlistSearchs_InventoryCategory">Inventory Category</label></td> 
+            <td>
+              <select id="ContentPanel1productlistSearchs_InventoryCategory" name="{s_InventoryCategory_Name}">
+                <option selected value="">Select Value</option>
+                {s_InventoryCategory_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1productlistSearchs_IsActive">Is Active</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_IsActive --><input type="text" id="ContentPanel1productlistSearchs_IsActive" maxlength="10" size="10" value="{s_IsActive}" name="{s_IsActive_Name}"><!-- END TextBox s_IsActive --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1productlistSearchproductlistPageSize">Records per page</label></td> 
+            <td>
+              <select id="ContentPanel1productlistSearchproductlistPageSize" name="{productlistPageSize_Name}">
+                {productlistPageSize_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentPanel1productlistSearchButton_DoSearch" class="Button" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record productlistSearch --><br>
+<!-- BEGIN Grid productlist -->
+<table id="ContentPanel1productlist" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          <td class="th"><strong>Product List </strong></td> 
+          <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="7">Total Records:&nbsp;{productlist_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Id --><span class="Sorter">Id 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1productlistSorter_Id"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1productlistSorter_Id"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Id --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_InventoryItem --><span class="Sorter">Inventory Item 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1productlistSorter_InventoryItem"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1productlistSorter_InventoryItem"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_InventoryItem --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_InventoryDescription --><span class="Sorter">Inventory Description 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1productlistSorter_InventoryDescription"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1productlistSorter_InventoryDescription"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_InventoryDescription --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_InventoryCategory --><span class="Sorter">Inventory Category 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1productlistSorter_InventoryCategory"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1productlistSorter_InventoryCategory"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_InventoryCategory --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_InventoryCategoryDescription --><span class="Sorter">Inventory Category Description 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1productlistSorter_InventoryCategoryDescription"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1productlistSorter_InventoryCategoryDescription"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_InventoryCategoryDescription --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_IsActive --><span class="Sorter">Is Active 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1productlistSorter_IsActive"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1productlistSorter_IsActive"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_IsActive --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_unitprice --><span class="Sorter">Unitprice 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentPanel1productlistSorter_unitprice"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentPanel1productlistSorter_unitprice"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_unitprice --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{Id_Src}" id="ContentPanel1productlistId_{productlist:rowNumber}">{Id}</a>&nbsp;</td> 
+          <td>{InventoryItem}&nbsp;</td> 
+          <td>{InventoryDescription}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{InventoryCategory}&nbsp;</td> 
+          <td>{InventoryCategoryDescription}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{IsActive}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{unitprice}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="7"><a href="{productlist_Insert_Src}" id="ContentPanel1productlistproductlist_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirst.png"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirstOff.png"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrev.png"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrevOff.png"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNext.png"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNextOff.png"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLast.png"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLastOff.png"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid productlist --><br>
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record inventoryitem -->
+<form id="ContentPanel1Panel2inventoryitem" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Add/Edit Inventoryitem </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2inventoryitemInventoryItem1">Inventory Item</label></td> 
+            <td><input type="text" id="ContentPanel1Panel2inventoryitemInventoryItem1" maxlength="250" size="50" value="{InventoryItem1}" name="{InventoryItem1_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2inventoryitemInventoryDescription">Inventory Description</label></td> 
+            <td><textarea id="ContentPanel1Panel2inventoryitemInventoryDescription" rows="3" cols="50" name="{InventoryDescription_Name}">{InventoryDescription}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2inventoryitemInventoryCategory">Inventory Category</label></td> 
+            <td>
+              <select id="ContentPanel1Panel2inventoryitemInventoryCategory" name="{InventoryCategory_Name}">
+                <option selected value="">Select Value</option>
+                {InventoryCategory_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2inventoryitemunitprice">Unit Price</label></td> 
+            <td><input type="text" id="ContentPanel1Panel2inventoryitemunitprice" maxlength="12" size="12" value="{unitprice}" name="{unitprice_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel1Panel2inventoryitemIsActive">Is Active</label></td> 
+            <td><input type="checkbox" id="ContentPanel1Panel2inventoryitemIsActive" value="1" name="{IsActive_Name}" {IsActive}></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentPanel1Panel2inventoryitemButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="ContentPanel1Panel2inventoryitemButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentPanel1Panel2inventoryitemButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="ContentPanel1Panel2inventoryitemButton_Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record inventoryitem --><!-- END Panel Panel2 --><br>
+<!-- END Panel Panel1 --><!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->&nbsp; 

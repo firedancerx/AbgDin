@@ -1,0 +1,117 @@
+
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-1E47B4BB
+</script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-jquery-ui-calendar.css">
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-086B467C
+    $('body').ccsBind(function() {
+        features["ContentproductionProductionDateInlineDatePicker1"] = $('*:ccsControl(Content, production, ProductionDate)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-70314395
+    params["ContentproductionProductionDateInlineDatePicker1"] = { 
+        dateFormat: "ShortDate",
+        isWeekend: true
+    };
+//End Feature Parameters
+
+//Feature Init @1-562EAD41
+    features["ContentproductionProductionDateInlineDatePicker1"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentproductionProductionDateInlineDatePicker1"]);
+    });
+//End Feature Init
+
+//Plugin Calls @1-43399AFB
+    $('*:ccsControl(Content, production, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Production</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record production -->
+<form id="Contentproduction" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Add/Edit Production </h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentproductionErrorBlock">
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td><label for="ContentproductionId">Id</label></td> 
+      <td><input type="text" id="ContentproductionId" maxlength="10" size="10" value="{Id}" name="{Id_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentproductionProductionDate">Production Date</label></td> 
+      <td><input type="text" id="ContentproductionProductionDate" maxlength="100" size="10" value="{ProductionDate}" name="{ProductionDate_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentproductionProductionItem">Production Item</label></td> 
+      <td>
+        <select id="ContentproductionProductionItem" name="{ProductionItem_Name}">
+          <option selected value="">Select Value</option>
+          {ProductionItem_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentproductionProductionQty">Production Qty</label></td> 
+      <td><input type="text" id="ContentproductionProductionQty" maxlength="10" size="10" value="{ProductionQty}" name="{ProductionQty_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentproductionProductionRemarks">Production Remarks</label></td> 
+      <td><input type="text" id="ContentproductionProductionRemarks" maxlength="250" size="50" value="{ProductionRemarks}" name="{ProductionRemarks_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentproductionIsActive">Is Active</label></td> 
+      <td><input type="text" id="ContentproductionIsActive" maxlength="10" size="10" value="{IsActive}" name="{IsActive_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td style="TEXT-ALIGN: right" colspan="2">
+        <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentproductionButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input type="submit" id="ContentproductionButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentproductionButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record production --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->

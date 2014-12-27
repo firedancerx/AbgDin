@@ -1,0 +1,242 @@
+
+<!-- BEGIN Menu Menu1 -->
+<!-- BEGIN Item -->
+<!-- BEGIN OpenLevel -->
+<ul class="level{Menu1:Item_Level}">
+  <!-- END OpenLevel -->
+  <title>contactus</title>
+ 
+  <ul>
+    <li><a href="{ItemLink_Src}" class="{Menu1:Submenu}" target="{Menu1:Target}" title="{Menu1:Title}">{ItemLink}</a> 
+    <!-- BEGIN CloseItem --></li>
+ <!-- END CloseItem -->
+    <!-- BEGIN CloseLevel -->
+  </ul>
+ </li>
+ <!-- END CloseLevel --><!-- END Item --><!-- END Menu Menu1 -->
+  <!-- BEGIN Panel Head -->
+  <script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+  <script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+  {page:scriptIncludes}
+  <script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Plugin Calls @1-FD390785
+    $('*:ccsControl(Menu1Container)').ccsBind(function() {
+        this.ccsMenu();
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+  <meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+  <!-- END Panel Head -->
+  <!-- BEGIN Panel Content -->
+  <!-- BEGIN Record contactusSearch -->
+  <ul>
+  </ul>
+  <form id="ContentcontactusSearch" method="post" name="{HTMLFormName}" action="{Action}">
+    <h2>Search </h2>
+    <table>
+      <!-- BEGIN Error -->
+      <tr id="ContentcontactusSearchErrorBlock">
+        <td colspan="2">{Error}</td>
+      </tr>
+      <!-- END Error -->
+      <tr>
+        <td><label for="ContentcontactusSearchs_ContactName">Contact Name</label></td> 
+        <td><input type="text" id="ContentcontactusSearchs_ContactName" maxlength="250" size="50" value="{s_ContactName}" name="{s_ContactName_Name}"></td>
+      </tr>
+ 
+      <tr>
+        <td><label for="ContentcontactusSearchs_ContactEmail">Contact Email</label></td> 
+        <td><input type="text" id="ContentcontactusSearchs_ContactEmail" maxlength="250" size="50" value="{s_ContactEmail}" name="{s_ContactEmail_Name}"></td>
+      </tr>
+ 
+      <tr>
+        <td><label for="ContentcontactusSearchs_ContactPhone">Contact Phone</label></td> 
+        <td><input type="text" id="ContentcontactusSearchs_ContactPhone" maxlength="250" size="50" value="{s_ContactPhone}" name="{s_ContactPhone_Name}"></td>
+      </tr>
+ 
+      <tr>
+        <td><label for="ContentcontactusSearchs_ContactUser">Contact User</label></td> 
+        <td>
+          <select id="ContentcontactusSearchs_ContactUser" name="{s_ContactUser_Name}">
+            <option selected value="">Select Value</option>
+            {s_ContactUser_Options}
+          </select>
+ </td>
+      </tr>
+ 
+      <tr>
+        <td><label for="ContentcontactusSearchs_ContactSubject">Contact Subject</label></td> 
+        <td><input type="text" id="ContentcontactusSearchs_ContactSubject" maxlength="250" size="50" value="{s_ContactSubject}" name="{s_ContactSubject_Name}"></td>
+      </tr>
+ 
+      <tr>
+        <td><label for="ContentcontactusSearchs_ContactContent">Contact Content</label></td> 
+        <td><input type="text" id="ContentcontactusSearchs_ContactContent" maxlength="250" size="50" value="{s_ContactContent}" name="{s_ContactContent_Name}"></td>
+      </tr>
+ 
+      <tr>
+        <td><label for="ContentcontactusSearchs_ContactReplyBy">Contact Reply By</label></td> 
+        <td>
+          <select id="ContentcontactusSearchs_ContactReplyBy" name="{s_ContactReplyBy_Name}">
+            <option selected value="">Select Value</option>
+            {s_ContactReplyBy_Options}
+          </select>
+ </td>
+      </tr>
+ 
+      <tr>
+        <td><label for="ContentcontactusSearchs_ContactReplyContent">Contact Reply Content</label></td> 
+        <td><input type="text" id="ContentcontactusSearchs_ContactReplyContent" maxlength="250" size="50" value="{s_ContactReplyContent}" name="{s_ContactReplyContent_Name}"></td>
+      </tr>
+ 
+      <tr>
+        <td style="TEXT-ALIGN: right" colspan="2">
+          <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentcontactusSearchButton_DoSearch" class="Button" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+      </tr>
+    </table>
+  </form>
+  <!-- END Record contactusSearch --><br>
+  <!-- BEGIN Grid contactus -->
+  <h2>List of Contact Requests</h2>
+  <table>
+    <tr>
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_Id --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_Id">Id</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_Id --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactDate --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactDate">Contact Date</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactDate --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactTime --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactTime">Contact Time</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactTime --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactName --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactName">Contact Name</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactName --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactEmail --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactEmail">Contact Email</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactEmail --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactPhone --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactPhone">Contact Phone</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactPhone --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactUser --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactUser">Contact User</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactUser --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactSubject --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactSubject">Contact Subject</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactSubject --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactContent --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactContent">Contact Content</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactContent --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactReplyDate --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactReplyDate">Contact Reply Date</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactReplyDate --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactReplyTime --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactReplyTime">Contact Reply Time</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactReplyTime --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactReplyBy --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactReplyBy">Contact Reply By</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactReplyBy --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ContactReplyContent --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_ContactReplyContent">Contact Reply Content</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_ContactReplyContent --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_IsActive --><span class="Sorter"><a href="{Sort_URL}" id="ContentcontactusSorter_IsActive">Is Active</a> 
+      <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On --></span><!-- END Sorter Sorter_IsActive --></th>
+    </tr>
+ 
+    <!-- BEGIN Row -->
+    <tr>
+      <td style="TEXT-ALIGN: right"><a href="{Id_Src}" id="ContentcontactusId_{contactus:rowNumber}">{Id}</a>&nbsp;</td> 
+      <td>{ContactDate}&nbsp;</td> 
+      <td>{ContactTime}&nbsp;</td> 
+      <td>{ContactName}&nbsp;</td> 
+      <td>{ContactEmail}&nbsp;</td> 
+      <td>{ContactPhone}&nbsp;</td> 
+      <td>{ContactUser}&nbsp;</td> 
+      <td>{ContactSubject}&nbsp;</td> 
+      <td>{ContactContent}&nbsp;</td> 
+      <td>{ContactReplyDate}&nbsp;</td> 
+      <td>{ContactReplyTime}&nbsp;</td> 
+      <td>{ContactReplyBy}&nbsp;</td> 
+      <td>{ContactReplyContent}&nbsp;</td> 
+      <td style="TEXT-ALIGN: right">{IsActive}&nbsp;</td>
+    </tr>
+ <!-- END Row -->
+    <!-- BEGIN NoRecords -->
+    <tr>
+      <td colspan="14">No records</td>
+    </tr>
+    <!-- END NoRecords -->
+    <tr>
+      <td colspan="14"><a href="{contactus_Insert_Src}" id="Contentcontactuscontactus_Insert">Add New</a>&nbsp; 
+        <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+        <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+          <option selected value="">-</option>
+ {PageSize_Options}
+        </select>
+ 
+        <!-- BEGIN First_On --><a href="{First_URL}">|&lt;</a> <!-- END First_On -->
+        <!-- BEGIN First_Off -->|&lt; <!-- END First_Off -->
+        <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt;</a> <!-- END Prev_On -->
+        <!-- BEGIN Prev_Off -->&lt;&lt; <!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+        <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt;</a> <!-- END Next_On -->
+        <!-- BEGIN Next_Off -->&gt;&gt; <!-- END Next_Off -->
+        <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;|</a> <!-- END Last_On -->
+        <!-- BEGIN Last_Off -->&gt;| <!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+    </tr>
+  </table>
+  <!-- END Grid contactus --><br>
+  <!-- END Panel Content -->
+  <!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+  <!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+  <!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->

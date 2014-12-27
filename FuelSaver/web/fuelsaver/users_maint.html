@@ -1,0 +1,136 @@
+
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-A87AC9EE
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Plugin Calls @1-458BF3AB
+    $('*:ccsControl(Content, users, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Users</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record users -->
+<form id="Contentusers" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Add/Edit Users </h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentusersErrorBlock">
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td><label for="ContentusersId">Id</label></td> 
+      <td><input type="text" id="ContentusersId" maxlength="10" size="10" value="{Id}" name="{Id_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserId">User Id</label></td> 
+      <td><input type="text" id="ContentusersUserId" maxlength="250" size="50" value="{UserId}" name="{UserId_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserPassword">User Password</label></td> 
+      <td><input type="text" id="ContentusersUserPassword" maxlength="250" size="50" value="{UserPassword}" name="{UserPassword_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserFullName">User Full Name</label></td> 
+      <td><input type="text" id="ContentusersUserFullName" maxlength="250" size="50" value="{UserFullName}" name="{UserFullName_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserRole">User Role</label></td> 
+      <td>
+        <select id="ContentusersUserRole" name="{UserRole_Name}">
+          <option selected value="">Select Value</option>
+          {UserRole_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserEmail">User Email</label></td> 
+      <td><input type="text" id="ContentusersUserEmail" maxlength="250" size="50" value="{UserEmail}" name="{UserEmail_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserTelephone">User Telephone</label></td> 
+      <td><input type="text" id="ContentusersUserTelephone" maxlength="250" size="50" value="{UserTelephone}" name="{UserTelephone_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserAddress1">User Address1</label></td> 
+      <td><input type="text" id="ContentusersUserAddress1" maxlength="250" size="50" value="{UserAddress1}" name="{UserAddress1_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserAddress2">User Address2</label></td> 
+      <td><input type="text" id="ContentusersUserAddress2" maxlength="250" size="50" value="{UserAddress2}" name="{UserAddress2_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserAddress3">User Address3</label></td> 
+      <td><input type="text" id="ContentusersUserAddress3" maxlength="250" size="50" value="{UserAddress3}" name="{UserAddress3_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserTown">User Town</label></td> 
+      <td><input type="text" id="ContentusersUserTown" maxlength="250" size="50" value="{UserTown}" name="{UserTown_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersUserState">User State</label></td> 
+      <td>
+        <select id="ContentusersUserState" name="{UserState_Name}">
+          <option selected value="">Select Value</option>
+          {UserState_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentusersIsActive">Is Active</label></td> 
+      <td><input type="text" id="ContentusersIsActive" maxlength="10" size="10" value="{IsActive}" name="{IsActive_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td style="TEXT-ALIGN: right" colspan="2">
+        <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentusersButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input type="submit" id="ContentusersButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentusersButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record users --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->

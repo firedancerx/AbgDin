@@ -1,0 +1,712 @@
+
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record reportregistrationsSearch -->
+<form id="ContentreportregistrationsSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Search </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="{@error-block}" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchs_UserId">User Id</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_UserId --><input type="text" id="ContentreportregistrationsSearchs_UserId" maxlength="250" size="50" value="{s_UserId}" name="{s_UserId_Name}"><!-- END TextBox s_UserId --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchs_UserFullName">User Full Name</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_UserFullName --><input type="text" id="ContentreportregistrationsSearchs_UserFullName" maxlength="250" size="50" value="{s_UserFullName}" name="{s_UserFullName_Name}"><!-- END TextBox s_UserFullName --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchs_UserEmail">User Email</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_UserEmail --><input type="text" id="ContentreportregistrationsSearchs_UserEmail" maxlength="250" size="50" value="{s_UserEmail}" name="{s_UserEmail_Name}"><!-- END TextBox s_UserEmail --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchs_UserTelephone">User Telephone</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_UserTelephone --><input type="text" id="ContentreportregistrationsSearchs_UserTelephone" maxlength="250" size="50" value="{s_UserTelephone}" name="{s_UserTelephone_Name}"><!-- END TextBox s_UserTelephone --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchs_postcode">Postcode</label></td> 
+            <td>
+              <!-- BEGIN TextBox s_postcode --><input type="text" id="ContentreportregistrationsSearchs_postcode" maxlength="10" size="10" value="{s_postcode}" name="{s_postcode_Name}"><!-- END TextBox s_postcode --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchs_UserRole">User Role</label></td> 
+            <td>
+              <select id="ContentreportregistrationsSearchs_UserRole" name="{s_UserRole_Name}">
+                <option selected value="">Select Value</option>
+                {s_UserRole_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchs_UserState">User State</label></td> 
+            <td>
+              <select id="ContentreportregistrationsSearchs_UserState" name="{s_UserState_Name}">
+                <option selected value="">Select Value</option>
+                {s_UserState_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchs_UserCountry">User Country</label></td> 
+            <td>
+              <select id="ContentreportregistrationsSearchs_UserCountry" name="{s_UserCountry_Name}">
+                <option selected value="">Select Value</option>
+                {s_UserCountry_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchs_IsActive">Is Active</label></td> 
+            <td><input type="checkbox" id="ContentreportregistrationsSearchs_IsActive" value="1" name="{s_IsActive_Name}" {s_IsActive}></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentreportregistrationsSearchreportregistrationsPageSize">Records per page</label></td> 
+            <td>
+              <select id="ContentreportregistrationsSearchreportregistrationsPageSize" name="{reportregistrationsPageSize_Name}">
+                {reportregistrationsPageSize_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input type="submit" id="ContentreportregistrationsSearchButton_DoSearch" class="Button" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record reportregistrationsSearch --><br>
+<!-- BEGIN Grid reportregistrations -->
+<table id="Contentreportregistrations" class="MainTable" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+          <td class="th"><strong>Registered Users </strong></td> 
+          <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="17">Total Records:&nbsp;{reportregistrations_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Id --><span class="Sorter">Id 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_Id"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_Id"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Id --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserId --><span class="Sorter">User Id 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserId"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserId"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserId --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserFullName --><span class="Sorter">User Full Name 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserFullName"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserFullName"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserFullName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Role --><span class="Sorter">Role 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_Role"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_Role"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Role --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserEmail --><span class="Sorter">User Email 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserEmail"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserEmail"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserEmail --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserTelephone --><span class="Sorter">User Telephone 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserTelephone"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserTelephone"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserTelephone --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserAddress1 --><span class="Sorter">User Address1 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserAddress1"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserAddress1"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserAddress1 --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserAddress2 --><span class="Sorter">User Address2 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserAddress2"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserAddress2"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserAddress2 --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserAddress3 --><span class="Sorter">User Address3 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserAddress3"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserAddress3"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserAddress3 --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserTown --><span class="Sorter">User Town 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserTown"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserTown"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserTown --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_postcode --><span class="Sorter">Postcode 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_postcode"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_postcode"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_postcode --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_State --><span class="Sorter">State 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_State"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_State"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_State --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Country --><span class="Sorter">Country 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_Country"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_Country"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_Country --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_IsActive --><span class="Sorter">Is Active 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_IsActive"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_IsActive"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_IsActive --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserRole --><span class="Sorter">User Role 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserRole"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserRole"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserRole --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserState --><span class="Sorter">User State 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserState"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserState"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserState --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_UserCountry --><span class="Sorter">User Country 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscActive.png"><!-- END Asc_On -->
+          <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="ContentreportregistrationsSorter_UserCountry"><img alt="Ascending" src="{CCS_PathToMasterPage}Images/SorterAscPassive.png"></a><!-- END Asc_Off -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescActive.png"><!-- END Desc_On -->
+          <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="ContentreportregistrationsSorter_UserCountry"><img alt="Descending" src="{CCS_PathToMasterPage}Images/SorterDescPassive.png"></a><!-- END Desc_Off --></span><!-- END Sorter Sorter_UserCountry --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{Id_Src}" id="ContentreportregistrationsId_{reportregistrations:rowNumber}">{Id}</a>&nbsp;</td> 
+          <td>{UserId}&nbsp;</td> 
+          <td>{UserFullName}&nbsp;</td> 
+          <td>{Role}&nbsp;</td> 
+          <td>{UserEmail}&nbsp;</td> 
+          <td>{UserTelephone}&nbsp;</td> 
+          <td>{UserAddress1}&nbsp;</td> 
+          <td>{UserAddress2}&nbsp;</td> 
+          <td>{UserAddress3}&nbsp;</td> 
+          <td>{UserTown}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{postcode}&nbsp;</td> 
+          <td>{State}&nbsp;</td> 
+          <td>{Country}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{IsActive}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{UserRole}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{UserState}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{UserCountry}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="17">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="17"><a href="{reportregistrations_Insert_Src}" id="Contentreportregistrationsreportregistrations_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator --><span class="Navigator">Records per page 
+            <select style="VERTICAL-ALIGN: middle" name="{FormName}PageSize" data-grid-size="{FormName}">
+              <option selected value="">-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}"><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirst.png"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img alt="{First_URL}" src="{CCS_PathToMasterPage}Images/NavigatorFirstOff.png"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrev.png"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img alt="{Prev_URL}" src="{CCS_PathToMasterPage}Images/NavigatorPrevOff.png"><!-- END Prev_Off -->&nbsp;{Page_Number} of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNext.png"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img alt="{Next_URL}" src="{CCS_PathToMasterPage}Images/NavigatorNextOff.png"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLast.png"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img alt="{Last_URL}" src="{CCS_PathToMasterPage}Images/NavigatorLastOff.png"><!-- END Last_Off --></span><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid reportregistrations --><br>
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record users -->
+<form id="ContentPanel2users" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="MainTable" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td> 
+            <td class="th"><strong>Add/Edit Users </strong></td> 
+            <td class="HeaderRight"><img alt="" src="{CCS_PathToMasterPage}Images/Spacer.gif"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr id="ErrorBlock" class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserId">User Id</label></td> 
+            <td><input type="text" id="ContentPanel2usersUserId" maxlength="250" size="50" value="{UserId}" name="{UserId_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserPassword">User Password</label></td> 
+            <td><input type="text" id="ContentPanel2usersUserPassword" maxlength="250" size="50" value="{UserPassword}" name="{UserPassword_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserFullName">User Full Name</label></td> 
+            <td><input type="text" id="ContentPanel2usersUserFullName" maxlength="250" size="50" value="{UserFullName}" name="{UserFullName_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserRole">User Role</label></td> 
+            <td>
+              <select id="ContentPanel2usersUserRole" name="{UserRole_Name}">
+                <option selected value="">Select Value</option>
+                {UserRole_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserEmail">User Email</label></td> 
+            <td><input type="text" id="ContentPanel2usersUserEmail" maxlength="250" size="50" value="{UserEmail}" name="{UserEmail_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserTelephone">User Telephone</label></td> 
+            <td><input type="text" id="ContentPanel2usersUserTelephone" maxlength="250" size="50" value="{UserTelephone}" name="{UserTelephone_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserAddress1">User Address1</label></td> 
+            <td><input type="text" id="ContentPanel2usersUserAddress1" maxlength="250" size="50" value="{UserAddress1}" name="{UserAddress1_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserAddress2">User Address2</label></td> 
+            <td><input type="text" id="ContentPanel2usersUserAddress2" maxlength="250" size="50" value="{UserAddress2}" name="{UserAddress2_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserAddress3">User Address3</label></td> 
+            <td><input type="text" id="ContentPanel2usersUserAddress3" maxlength="250" size="50" value="{UserAddress3}" name="{UserAddress3_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserTown">User Town</label></td> 
+            <td><input type="text" id="ContentPanel2usersUserTown" maxlength="250" size="50" value="{UserTown}" name="{UserTown_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2userspostcode">Postcode</label></td> 
+            <td><input type="text" id="ContentPanel2userspostcode" maxlength="10" size="10" value="{postcode}" name="{postcode_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserState">User State</label></td> 
+            <td>
+              <select id="ContentPanel2usersUserState" name="{UserState_Name}">
+                <option selected value="">Select Value</option>
+                {UserState_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersUserCountry">User Country</label></td> 
+            <td>
+              <select id="ContentPanel2usersUserCountry" name="{UserCountry_Name}">
+                <option selected value="">Select Value</option>
+                {UserCountry_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="ContentPanel2usersIsActive">Is Active</label></td> 
+            <td><input type="checkbox" id="ContentPanel2usersIsActive" value="1" name="{IsActive_Name}" {IsActive}></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentPanel2usersButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="submit" id="ContentPanel2usersButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentPanel2usersButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="submit" id="ContentPanel2usersButton_Cancel" class="Button" alt="Cancel" value="Cancel" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record users --><!-- END Panel Panel2 --><br>
+<!-- END Panel Content -->&nbsp; 
+<!-- BEGIN Panel Head -->
+<meta name="GENERATOR" content="CodeCharge Studio 5.1.1.18990">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-F9B79976
+</script>
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Features CSS @1-981C4AFB
+</script>
+<style type="text/css">
+    .ContentreportregistrationsSearchs_UserId-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .ContentreportregistrationsSearchs_UserFullName-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .ContentreportregistrationsSearchs_UserEmail-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .ContentreportregistrationsSearchs_UserTelephone-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .ContentreportregistrationsSearchs_postcode-autocomplete {
+        max-height: 250px;
+        width: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+</style>
+<script type="text/javascript">
+//End Features CSS
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-FD434F81
+    $('body').ccsBind(function() {
+        features["ContentreportregistrationsSearchs_UserIdAutocomplete1"] = $('*:ccsControl(Content, reportregistrationsSearch, s_UserId)');
+        features["ContentreportregistrationsSearchs_UserFullNameAutocomplete2"] = $('*:ccsControl(Content, reportregistrationsSearch, s_UserFullName)');
+        features["ContentreportregistrationsSearchs_UserEmailAutocomplete3"] = $('*:ccsControl(Content, reportregistrationsSearch, s_UserEmail)');
+        features["ContentreportregistrationsSearchs_UserTelephoneAutocomplete4"] = $('*:ccsControl(Content, reportregistrationsSearch, s_UserTelephone)');
+        features["ContentreportregistrationsSearchs_postcodeAutocomplete5"] = $('*:ccsControl(Content, reportregistrationsSearch, s_postcode)');
+        features["ContentPanel2DialogPanel1"] = $('*:ccsControl(Content, Panel2)');
+        features["ContentUpdatePanel1"] = $('*:ccsControl(Content)');
+        features["Contentcondition_for_show"] = $('*:ccsControl(Content)');
+        features["Contentcondition_for_hide"] = $('*:ccsControl(Content)');
+        features["Contentccc_link_Condition"] = $('*:ccsControl(Content)');
+        features["Contentccc_submit_Condition"] = $('*:ccsControl(Content)');
+        features["Contentccc_others_Condition"] = $('*:ccsControl(Content)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-98A73508
+    params["ContentreportregistrationsSearchs_UserIdAutocomplete1"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentreportregistrationsSearchs_UserId-autocomplete",
+        source: "services/reportregistration_s_UserId_Autocomplete1.php"
+    };
+    params["ContentreportregistrationsSearchs_UserFullNameAutocomplete2"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentreportregistrationsSearchs_UserFullName-autocomplete",
+        source: "services/reportregistration_s_UserFullName_Autocomplete1.php"
+    };
+    params["ContentreportregistrationsSearchs_UserEmailAutocomplete3"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentreportregistrationsSearchs_UserEmail-autocomplete",
+        source: "services/reportregistration_s_UserEmail_Autocomplete1.php"
+    };
+    params["ContentreportregistrationsSearchs_UserTelephoneAutocomplete4"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentreportregistrationsSearchs_UserTelephone-autocomplete",
+        source: "services/reportregistration_s_UserTelephone_Autocomplete1.php"
+    };
+    params["ContentreportregistrationsSearchs_postcodeAutocomplete5"] = { 
+        template: '{@text}',
+        customCssClassName: "ContentreportregistrationsSearchs_postcode-autocomplete",
+        source: "services/reportregistration_s_postcode_Autocomplete1.php"
+    };
+    params["ContentPanel2DialogPanel1"] = { 
+        title: " Add/Edit Users ",
+        modal: true,
+        autoOpen: false
+    };
+    params["ContentUpdatePanel1"] = {
+        name: "Content"
+    };
+//End Feature Parameters
+
+//Feature Init @1-3C5714E6
+    features["ContentreportregistrationsSearchs_UserIdAutocomplete1"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentreportregistrationsSearchs_UserIdAutocomplete1"]);
+    });
+    features["ContentreportregistrationsSearchs_UserFullNameAutocomplete2"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentreportregistrationsSearchs_UserFullNameAutocomplete2"]);
+    });
+    features["ContentreportregistrationsSearchs_UserEmailAutocomplete3"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentreportregistrationsSearchs_UserEmailAutocomplete3"]);
+    });
+    features["ContentreportregistrationsSearchs_UserTelephoneAutocomplete4"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentreportregistrationsSearchs_UserTelephoneAutocomplete4"]);
+    });
+    features["ContentreportregistrationsSearchs_postcodeAutocomplete5"].ccsBind(function() {
+        this.ccsAutoComplete(params["ContentreportregistrationsSearchs_postcodeAutocomplete5"]);
+    });
+    features["ContentPanel2DialogPanel1"].ccsBind(function() {
+        this.ccsDialog(params["ContentPanel2DialogPanel1"]);
+    });
+    features["ContentUpdatePanel1"].ccsBind(function() {
+        this.ccsUpdatePanel(params["ContentUpdatePanel1"]);
+    });
+//End Feature Init
+
+//DialogPanel1 show Entry Point @160-A60665B3
+    actions["ContentPanel2DialogPanel1_show"] = function () {
+        features["ContentPanel2DialogPanel1"].ccsDialog("show");
+        return false;
+    };
+//End DialogPanel1 show Entry Point
+
+//DialogPanel1 hide Entry Point @160-4FB1F50C
+    actions["ContentPanel2DialogPanel1_hide"] = function () {
+        features["ContentPanel2DialogPanel1"].ccsDialog("hide");
+    };
+//End DialogPanel1 hide Entry Point
+
+//condition_for_show start Entry Point Start @133-752BAAF6
+    actions["Contentcondition_for_show_start"] = function (eventType, parameters) {
+//End condition_for_show start Entry Point Start
+
+//condition_for_show start Entry Point Body @133-2A41F711
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content)");
+        if (true==(params["click"] == "link")) {
+            self.trigger($.Event("true.condition_for_show"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_show"), {});
+        }
+//End condition_for_show start Entry Point Body
+
+//condition_for_show start Entry Point End @133-6A43FC60
+    };
+//End condition_for_show start Entry Point End
+
+//condition_for_hide start Entry Point Start @138-696FFDC6
+    actions["Contentcondition_for_hide_start"] = function (eventType, parameters) {
+//End condition_for_hide start Entry Point Start
+
+//condition_for_hide start Entry Point Body @138-01F743A2
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content)");
+        if (true==(params["click"] == "submit" && $("#ErrorBlock").length == 0)) {
+            self.trigger($.Event("true.condition_for_hide"), {});
+        } else {
+            self.trigger($.Event("false.condition_for_hide"), {});
+        }
+//End condition_for_hide start Entry Point Body
+
+//condition_for_hide start Entry Point End @138-6A43FC60
+    };
+//End condition_for_hide start Entry Point End
+
+//ccc_link_Condition start Entry Point Start @143-6367ADFC
+    actions["Contentccc_link_Condition_start"] = function (eventType, parameters) {
+//End ccc_link_Condition start Entry Point Start
+
+//ccc_link_Condition start Entry Point Body @143-D90F9EB4
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content)");
+        if (true==(params["click"] = "link")) {
+            self.trigger($.Event("true.ccc_link_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_link_Condition"), {});
+        }
+//End ccc_link_Condition start Entry Point Body
+
+//ccc_link_Condition start Entry Point End @143-6A43FC60
+    };
+//End ccc_link_Condition start Entry Point End
+
+//ccc_submit_Condition start Entry Point Start @154-92F73527
+    actions["Contentccc_submit_Condition_start"] = function (eventType, parameters) {
+//End ccc_submit_Condition start Entry Point Start
+
+//ccc_submit_Condition start Entry Point Body @154-294B69EB
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content)");
+        if (true==(params["click"] = "submit")) {
+            self.trigger($.Event("true.ccc_submit_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_submit_Condition"), {});
+        }
+//End ccc_submit_Condition start Entry Point Body
+
+//ccc_submit_Condition start Entry Point End @154-6A43FC60
+    };
+//End ccc_submit_Condition start Entry Point End
+
+//ccc_others_Condition start Entry Point Start @169-15E81BE6
+    actions["Contentccc_others_Condition_start"] = function (eventType, parameters) {
+//End ccc_others_Condition start Entry Point Start
+
+//ccc_others_Condition start Entry Point Body @169-4B472DC8
+        var self = $("*:ccsSameLevelControl(" + $(this).ccsId() + ", Content)");
+        if (true==(params["click"] = "")) {
+            self.trigger($.Event("true.ccc_others_Condition"), {});
+        } else {
+            self.trigger($.Event("false.ccc_others_Condition"), {});
+        }
+//End ccc_others_Condition start Entry Point Body
+
+//ccc_others_Condition start Entry Point End @169-6A43FC60
+    };
+//End ccc_others_Condition start Entry Point End
+
+//ContentPanel2usersButton_DeleteOnClick Event Start @-0FD9049E
+    actions["ContentPanel2usersButton_DeleteOnClick"] = function (eventType, parameters) {
+        var result = true;
+//End ContentPanel2usersButton_DeleteOnClick Event Start
+
+//Confirmation Message @108-8243B274
+        return confirm('Delete record?');
+//End Confirmation Message
+
+//ContentPanel2usersButton_DeleteOnClick Event End @-A5B9ECB8
+        return result;
+    };
+//End ContentPanel2usersButton_DeleteOnClick Event End
+
+//Event Binding @1-DE558D3C
+    features["ContentBeforeShow"].ccsBind(function() {
+        this.bind("true.condition_for_show", actions["ContentPanel2DialogPanel1_show"]);
+    });
+    features["Contentcondition_for_hide"].ccsBind(function() {
+        this.bind("true.condition_for_hide", actions["ContentPanel2DialogPanel1_hide"]);
+    });
+    features["ContentUpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["Contentcondition_for_show_start"]);
+    });
+    features["ContentUpdatePanel1"].ccsBind(function() {
+        this.bind("afterrefresh.ccsUpdatePanel", actions["Contentcondition_for_hide_start"]);
+    });
+    features["ContentPanel2DialogPanel1"].ccsBind(function() {
+        this.bind("show.ccsDialog", actions["Contentccc_others_Condition_start"]);
+    });
+    features["ContentPanel2DialogPanel1"].ccsBind(function() {
+        this.bind("hide.ccsDialog", actions["Contentccc_others_Condition_start"]);
+    });
+    $('*:ccsControl(Content, reportregistrations, reportregistrations_Insert)').ccsBind(function() {
+        this.bind("click", actions["Contentccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, reportregistrations, Id)').ccsBind(function() {
+        this.bind("click", actions["Contentccc_link_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel2, users)').ccsBind(function() {
+        this.bind("submit", actions["Contentccc_submit_Condition_start"]);
+    });
+    $('*:ccsControl(Content, Panel2, users, Button_Delete)').ccsBind(function() {
+        this.bind("click", actions["ContentPanel2usersButton_DeleteOnClick"]);
+    });
+//End Event Binding
+
+//Plugin Calls @1-BA33DDC8
+    $('*:ccsControl(Content, Panel2, users, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+    $('*:ccsControl(Content, Panel2, users, Button_Cancel)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>index</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->&nbsp;&nbsp; 
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->&nbsp;&nbsp; 
+<!-- BEGIN Panel Menu -->&nbsp;{MenuIncludablePage}<!-- END Panel Menu -->

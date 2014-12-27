@@ -1,0 +1,155 @@
+
+<!-- BEGIN Panel Head -->
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-262290FB
+</script>
+<script src="{page:pathToRoot}ClientI18N.php?file=Globalize.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-1E47B4BB
+</script>
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="{CCS_PathToMasterPage}ccs-jquery-ui-calendar.css">
+{page:scriptIncludes}
+<script type="text/javascript">
+//End Include User Scripts
+
+//Common Script Start @1-8BFA436B
+jQuery(function ($) {
+    var features = { };
+    var actions = { };
+    var params = { };
+//End Common Script Start
+
+//Controls Selecting @1-85A64493
+    $('body').ccsBind(function() {
+        features["ContentreceiptsReceiptDateInlineDatePicker1"] = $('*:ccsControl(Content, receipts, ReceiptDate)');
+        features["ContentreceiptsReceiptTimeInlineDatePicker2"] = $('*:ccsControl(Content, receipts, ReceiptTime)');
+    });
+//End Controls Selecting
+
+//Feature Parameters @1-EEC4D013
+    params["ContentreceiptsReceiptDateInlineDatePicker1"] = { 
+        dateFormat: "ShortDate",
+        isWeekend: true
+    };
+    params["ContentreceiptsReceiptTimeInlineDatePicker2"] = { 
+        dateFormat: "ShortDate",
+        isWeekend: true
+    };
+//End Feature Parameters
+
+//Feature Init @1-DCF65782
+    features["ContentreceiptsReceiptDateInlineDatePicker1"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentreceiptsReceiptDateInlineDatePicker1"]);
+    });
+    features["ContentreceiptsReceiptTimeInlineDatePicker2"].ccsBind(function() {
+        this.ccsDateTimePicker(params["ContentreceiptsReceiptTimeInlineDatePicker2"]);
+    });
+//End Feature Init
+
+//Plugin Calls @1-D8048D05
+    $('*:ccsControl(Content, receipts, Button_Delete)').ccsBind(function() {
+        this.bind("click", function(){ $("body").data("disableValidation", true); });
+    });
+//End Plugin Calls
+
+//Common Script End @1-562554DE
+});
+//End Common Script End
+
+//End CCS script
+</script>
+<title>Receipts</title>
+<meta content="text/html; charset=windows-1252" http-equiv="Content-Type">
+<!-- END Panel Head -->
+<!-- BEGIN Panel Content -->
+<!-- BEGIN Record receipts -->
+<form id="Contentreceipts" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Add/Edit Receipts </h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr id="ContentreceiptsErrorBlock">
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td><label for="ContentreceiptsId">Id</label></td> 
+      <td><input type="text" id="ContentreceiptsId" maxlength="10" size="10" value="{Id}" name="{Id_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsTempReceiptNo">Temp Receipt No</label></td> 
+      <td><input type="text" id="ContentreceiptsTempReceiptNo" maxlength="10" size="10" value="{TempReceiptNo}" name="{TempReceiptNo_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsReceiptNo">Receipt No</label></td> 
+      <td><input type="text" id="ContentreceiptsReceiptNo" maxlength="10" size="10" value="{ReceiptNo}" name="{ReceiptNo_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsReceiptDate">Receipt Date</label></td> 
+      <td><input type="text" id="ContentreceiptsReceiptDate" maxlength="100" size="10" value="{ReceiptDate}" name="{ReceiptDate_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsReceiptTime">Receipt Time</label></td> 
+      <td><input type="text" id="ContentreceiptsReceiptTime" maxlength="100" size="10" value="{ReceiptTime}" name="{ReceiptTime_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsSalesOrder">Sales Order</label></td> 
+      <td>
+        <select id="ContentreceiptsSalesOrder" name="{SalesOrder_Name}">
+          <option selected value="">Select Value</option>
+          {SalesOrder_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsReceiptAmount">Receipt Amount</label></td> 
+      <td><input type="text" id="ContentreceiptsReceiptAmount" maxlength="12" size="12" value="{ReceiptAmount}" name="{ReceiptAmount_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsReferenceId">Reference Id</label></td> 
+      <td><input type="text" id="ContentreceiptsReferenceId" maxlength="250" size="50" value="{ReferenceId}" name="{ReferenceId_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsVerifiedAmount">Verified Amount</label></td> 
+      <td><input type="text" id="ContentreceiptsVerifiedAmount" maxlength="12" size="12" value="{VerifiedAmount}" name="{VerifiedAmount_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsVerifiedBy">Verified By</label></td> 
+      <td>
+        <select id="ContentreceiptsVerifiedBy" name="{VerifiedBy_Name}">
+          <option selected value="">Select Value</option>
+          {VerifiedBy_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td><label for="ContentreceiptsIsActive">Is Active</label></td> 
+      <td><input type="text" id="ContentreceiptsIsActive" maxlength="10" size="10" value="{IsActive}" name="{IsActive_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td style="TEXT-ALIGN: right" colspan="2">
+        <!-- BEGIN Button Button_Insert --><input type="submit" id="ContentreceiptsButton_Insert" class="Button" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input type="submit" id="ContentreceiptsButton_Update" class="Button" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+        <!-- BEGIN Button Button_Delete --><input type="submit" id="ContentreceiptsButton_Delete" class="Button" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record receipts --><br>
+<!-- END Panel Content -->
+<!-- BEGIN Panel Menu -->{MenuIncludablePage}<!-- END Panel Menu -->
+<!-- BEGIN Panel Sidebar1 -->&nbsp;<!-- END Panel Sidebar1 -->
+<!-- BEGIN Panel HeaderSidebar -->&nbsp;&nbsp;{headerIncludablePage}<!-- END Panel HeaderSidebar -->
